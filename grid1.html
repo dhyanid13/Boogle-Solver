@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+<link href="style.css" rel="stylesheet" type="text/css">
+<link href="css/circle.css" rel="stylesheet" type="text/css">
+
+
+    <style>
+     body{
+        margin: 0;
+        padding: 0;
+        background: #262626;
+
+            }
+        .box {
+  background-color:#2617fb;
+  color: #fff;
+  border-radius: 8px;
+  padding: 30px;
+  font-size: 150%;
+  align-content: center;
+}
+.container .box:hover {
+  background: #57FEFF;
+  color:yellowgreen
+}
+
+.container {
+  width: 512px;
+  height: 550px;
+  display: grid;
+  margin: 150px auto;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, 120px);
+grid-template-rows: repeat(4, 120px);
+  grid-auto-flow: column;
+  align-content: center;
+}
+
+    </style>
+</head>
+<body>
+  <div class="game">
+	
+    <div class='timer' id='timer-div'><img src='./timer.png' alt='Timer' id='timer_img'><div id='time' >00:00</div></div><div class='clear'></div>
+      <div class="game_container">
+      <div class='panel_1'>
+      
+      <div class='game_panel'>
+       <div class="correct" id="correctboard">
+            <div class="correct_title">Correct <span id="score">0</span></div>
+              <div class="word_card_container left_box_scroll">
+      
+        </div>
+          </div>
+          <div class="game_cube clearfix" id='gameCube' board="standard">
+             <div id="cover">
+          <div class="intro">Welcome to our Boggle game!!
+          <div class="waiting" style='margin-left: 30%;'>
+            
+          <div id='cicle_loader' class="c100 p1 small ">
+                      <span id='load_cnt'>0%</span>
+                      <div class="slice">
+                          <div class="bar"></div>
+                          <div class="fill"></div>
+                      </div>
+                  </div>
+                  <div>
+                      <a href="game.html">start Game</a><br> <br> <br> <br><br><br><br><br><br><br><br><br><br>
+                  </div>
+          
+          </div>
+          <div class="container">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+            <div class="box">7</div>
+            <div class="box">8</div>
+            <div class="box">9</div>
+            <div class="box">10</div>
+            <div class="box">11</div>
+            <div class="box">12</div>
+            <div class="box">13</div>
+            <div class="box">14</div>
+            <div class="box">15</div>
+            <div class="box">16</div>
+          </div>
+          Your Word:
+          <input type="text" name="word">
+          </div>
+        </div>
+         <div id='gameCube1' class='letter_panel clearfix'>
+        
+         </div>
+         </div>
+          <div class="wrong" id='errorboard'>
+            <div class="wrong_title">Wrong <span id="errorscore">0</span></div>
+              <div class="word_card_container left_box_scroll">
+                
+        </div>
+          </div> 
+      </div>
+      <div class="info_panel clearfix">
+            <div class="info_line_btn" onclick='rotate();' id='rotate'>Refresh</div>
+              <div class="info_line" id="infoLine">Welcome To Boggle</div>
+              <div class="info_line_btn" id='mainBtn'>End Game</div>
+          </div>
+      </div>
+          <div class="answer_part" id="answerboard"  board="standard">
+       <!--<p>style="display:none;"</p>-->
+     <div class="answer_title">Answers <span id="answer_count">0</span></div>
+         <div class="answer" >
+            
+              <div class="word_card_container" id='answer_words'>
+                
+        </div>
+          </div>
+      </div>
+      
+      </div>
+  
+  </div>
+   
+</body>
+</html>
